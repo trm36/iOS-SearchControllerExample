@@ -14,6 +14,7 @@
 		0191AE581F87028F00099A1B /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0191AE571F87028F00099A1B /* Color.swift */; };
 		0191AE5A1F8704A900099A1B /* ColorTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0191AE591F8704A900099A1B /* ColorTableViewController.swift */; };
 		0191AE5C1F8705A500099A1B /* ColorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0191AE5B1F8705A500099A1B /* ColorTableViewCell.swift */; };
+		01B545B51F870D810038D1F8 /* ColorListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B545B41F870D810038D1F8 /* ColorListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		0191AE571F87028F00099A1B /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		0191AE591F8704A900099A1B /* ColorTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTableViewController.swift; sourceTree = "<group>"; };
 		0191AE5B1F8705A500099A1B /* ColorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTableViewCell.swift; sourceTree = "<group>"; };
+		01B545B41F870D810038D1F8 /* ColorListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				0191AE571F87028F00099A1B /* Color.swift */,
 				0191AE591F8704A900099A1B /* ColorTableViewController.swift */,
 				0191AE491F87024500099A1B /* Main.storyboard */,
+				01B545B41F870D810038D1F8 /* ColorListViewController.swift */,
 				0191AE5B1F8705A500099A1B /* ColorTableViewCell.swift */,
 				0191AE4C1F87024500099A1B /* Assets.xcassets */,
 				0191AE4E1F87024500099A1B /* LaunchScreen.storyboard */,
@@ -142,6 +145,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01B545B51F870D810038D1F8 /* ColorListViewController.swift in Sources */,
 				0191AE461F87024500099A1B /* AppDelegate.swift in Sources */,
 				0191AE5C1F8705A500099A1B /* ColorTableViewCell.swift in Sources */,
 				0191AE5A1F8704A900099A1B /* ColorTableViewController.swift in Sources */,

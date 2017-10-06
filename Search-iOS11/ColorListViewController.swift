@@ -1,5 +1,5 @@
 //
-//  ColorTableViewController.swift
+//  ColorListViewController.swift
 //  Search-iOS11
 //
 //  Created by Taylor Mott on 05-Oct-17.
@@ -8,39 +8,41 @@
 
 import UIKit
 
-class ColorTableViewController: UITableViewController, UISearchResultsUpdating {
+class ColorListViewController: UIViewController, UITableViewDataSource, UISearchResultsUpdating {
+    
+    @IBOutlet weak var tableView: UITableView!
     
     let searchController = UISearchController(searchResultsController: nil)
     var filteredColors = [Color]()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         searchController.searchResultsUpdater = self
         navigationItem.searchController = searchController
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
     // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if isFiltering {
             return filteredColors.count
         } else {
             return Color.colors3.count
         }
     }
-
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "colorCell", for: indexPath) as! ColorTableViewCell
         
         let color: Color
@@ -55,16 +57,16 @@ class ColorTableViewController: UITableViewController, UISearchResultsUpdating {
         
         return cell
     }
-
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
     
     // MARK: - Search
     
@@ -89,5 +91,4 @@ class ColorTableViewController: UITableViewController, UISearchResultsUpdating {
     private var isFiltering: Bool {
         return searchController.isActive && !searchBarIsEmpty
     }
-
 }
